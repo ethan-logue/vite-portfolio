@@ -7,7 +7,7 @@ interface PageProps {
     pageContainer?: string;
 }
 
-const SkillBox: React.FC<PageProps> = ({ page, children, pageContainer = 'page-container' }) => {
+const Page: React.FC<PageProps> = ({ page, children, pageContainer = 'page-container' }) => {
     return (
         <section id={page} className={`page ${page}`}>
             <div className={pageContainer}>
@@ -17,4 +17,4 @@ const SkillBox: React.FC<PageProps> = ({ page, children, pageContainer = 'page-c
     );
 };
 
-export default SkillBox;
+export default Page;

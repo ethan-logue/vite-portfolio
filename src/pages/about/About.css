@@ -2,8 +2,15 @@
     background-color: var(--primary);
 }
 
-.about > .page-container {
-    justify-content: space-between;
+.about-title {
+    font-size: 2rem;
+}
+
+.about-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    max-height: 100%;
 }
 
 .about-bio {
@@ -19,12 +26,11 @@
 .skill-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
+    justify-content: flex-start;
+    margin: 0 0 auto 0;
     padding: 1.5rem 0;
-    gap: 2rem;
+    gap: 1rem 1rem;
     overflow: hidden scroll;
-    max-width: 1200px;
 }
 
 .skill-container::-webkit-scrollbar {
@@ -53,7 +59,7 @@
     margin: 0;
 }
 
-@media (min-width: 1500px) {
+/* @media (min-width: 1500px) {
     .about-bio {
         font-size: 1.5rem;
     }
@@ -70,7 +76,7 @@
     .skill-title {
         font-size: 1.5rem;
     }
-}
+} */
 
 @media (max-width: 768px) {
     .about-bio {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Skill, { SkillProps } from './Skill';
-import { SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCss3, SiFilezilla, SiGit, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPython, SiTypescript, SiVisualstudiocode } from 'react-icons/si';
-import { FaFigma, FaJava, FaReact } from 'react-icons/fa';
+import { SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCss3, SiFilezilla, SiGit, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPython, SiSvelte, SiTypescript, SiVisualstudiocode } from 'react-icons/si';
+import { FaAngular, FaFigma, FaJava, FaReact, FaVuejs, FaWordpress } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -37,6 +37,26 @@ const SkillStack: React.FC = () => {
             skill: 'PHP',
             logo: <SiPhp />,
             fillColor: '#5664A1'
+        },
+        {
+            skill: 'WordPress',
+            logo: <FaWordpress />,
+            fillColor: '#1B769C'
+        },
+        {
+            skill: 'Angular',
+            logo: <FaAngular />,
+            fillColor: '#DE002D'
+        },
+        {
+            skill: 'Vue',
+            logo: <FaVuejs />,
+            fillColor: '#3FB984'
+        },
+        {
+            skill: 'Svelte',
+            logo: <SiSvelte />,
+            fillColor: '#FF3E00'
         },
         {
             skill: 'Python',

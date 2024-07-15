@@ -21,7 +21,7 @@ const Skill: React.FC<SkillProps> = ({ skill, logo, fillColor }) => {
             y: 50,
         },
         visible: {
-            opacity: 1,
+            opacity: 0.6,
             y: 0,
             transition: {
                 delay: 0.2,
@@ -37,9 +37,10 @@ const Skill: React.FC<SkillProps> = ({ skill, logo, fillColor }) => {
             animate={inView ? 'visible' : 'hidden'}
             variants={motionSkill}
             whileHover={{
-                    scale: 1.3, 
+                    scale: 1.2, 
                     transition: {type: 'tween', duration: 0.3}, 
-                    color: fillColor
+                    color: fillColor,
+                    opacity: 0.9
                 }}
         >
             {logo}

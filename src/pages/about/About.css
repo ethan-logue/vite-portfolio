@@ -3,24 +3,43 @@
 }
 
 .about-title {
-    font-size: 2rem;
+    text-align: left;
 }
 
 .about-container {
-    display: grid;
+    /* display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; */
     max-height: 100%;
 }
 
 .about-bio {
     font-size: 1.25rem;
-    max-width: 1000px;
-    margin: 1rem auto;
+    max-width: 800px;
+    /* margin: 1rem auto; */
+}
+
+.about-link {
+    color: var(--tertiary);
+    text-decoration: none;
+    transition: color .3s ease;
 }
 
 .about-bio:first-of-type {
     margin-bottom: 0;
+}
+
+.about-skills {
+    max-width: 800px;
+}
+
+.about-skills:before {
+    content: '';
+    display: block;
+    background: var(--tertiary);
+    width: 15%;
+    height: 1px;
+    margin: 2rem 0;
 }
 
 .skill-container {
@@ -28,7 +47,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0 0 auto 0;
-    padding: 1.5rem 0;
+    /* padding: 1.5rem 0; */
     gap: 1rem 1rem;
     overflow: hidden scroll;
 }

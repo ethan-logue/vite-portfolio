@@ -8,15 +8,14 @@ const About: React.FC = () => {
         <Page page={'about'} >
             <div className='about-container'>
                 <div className='about-info'>
-                    <h2 className='about-title'>About Me</h2>
-                    <p className='about-bio'>Hello there! I'm a third-year web and mobile undergraduate at RIT.</p>
-                    <p className='about-bio'>I'm currently seeking summer co-op opportunities that allow me to apply my passion for front-end development. While I initially pursued a Computing and Information Technologies major, my journey led me to realize my true passion lies in creating seamless user experiences through web development. Blending my tech affinity with a creative edge, transitioning to Web & Mobile Computing was a natural fit. I'm committed to perfecting front-end development to create immersive, comfortable, and intuitive user interfaces.</p>
+                    <h2 className='page-title about-title'>About Me</h2>
+                    <p className='about-bio'>Hello there! I'm a fourth-year web and mobile undergraduate at RIT.</p>
+                    <p className='about-bio'>I'm currently working at <a className='about-link' href='https://www.synapseresults.com/'>Synapse Marketing Solutions</a> as a Full-Stack Web Developer, where I am following my passion for front-end web development. While I initially pursued a degree in IT, my journey led me to realize my true passion lies in creating beautiful user experiences through web development. Blending my technical experience from my IT jobs with my passion for coding and creativity, transitioning to a Web & Mobile Computing degree was a natural fit. I'm committed to creating stylistic, consistent, and intuitive user interfaces for clients and improving myself as I do so.</p>
                 </div>
-    
                 <div className='about-skills'>
-                    <h2 className='about-title'>Skills</h2>
                     <SkillStack />
                 </div>
+    
             </div>
         </Page>
     );

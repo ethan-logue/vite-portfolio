@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
 
 	return (
 		<Page page={'projects'}>
-			<h1 className='page-title'>Projects</h1>
+			<h2 className='page-title'>Projects</h2>
 			<div className='project-container'>
 				{projects.map((project, index) => (
 					<ProjectItem key={index} {...project} />

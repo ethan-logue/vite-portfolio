@@ -1,5 +1,10 @@
 .about {
     background-color: var(--primary);
+    position: relative;
+}
+
+.about.page {
+    overflow: unset !important;
 }
 
 .about-title {
@@ -13,6 +18,11 @@
     max-height: 100%;
 }
 
+.about-info {
+    position: relative;
+    z-index: 1;
+}
+
 .about-bio {
     font-size: 1.25rem;
     max-width: 800px;
@@ -20,9 +30,13 @@
 }
 
 .about-link {
-    color: var(--tertiary);
+    color: var(--text);
     text-decoration: none;
     transition: color .3s ease;
+}
+
+.about-link:hover {
+    color: var(--tertiary);
 }
 
 .about-bio:first-of-type {
@@ -31,6 +45,8 @@
 
 .about-skills {
     max-width: 800px;
+    position: relative;
+    z-index: 1;
 }
 
 .about-skills:before {
@@ -76,6 +92,14 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     margin: 0;
+}
+
+.about-line-art {
+    position: absolute;
+    z-index: 5;
+    top: 10%;
+    right: -20%;
+    opacity: 0.7;
 }
 
 /* @media (min-width: 1500px) {

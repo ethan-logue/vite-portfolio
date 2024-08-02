@@ -6,10 +6,11 @@ import { useInView } from 'react-intersection-observer';
 export interface SocialLinkProps {
     link: string;
     icon: ReactElement;
+    label: string;
     d?: number;
 }
 
-const SocialLink: React.FC<SocialLinkProps> = ({ link, icon, d }) => {
+const SocialLink: React.FC<SocialLinkProps> = ({ link, icon, label, d }) => {
 
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -44,6 +45,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ link, icon, d }) => {
             variants={socialLink}
             target='_blank'
             href={link}
+            aria-label={label}
         > 
             {icon} 
         </motion.a>

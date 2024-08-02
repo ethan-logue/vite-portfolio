@@ -34,16 +34,19 @@ const Home: React.FC = () => {
         {
             link: 'https://github.com/ethan-logue',
             icon: <FaGithub />,
+            label: 'GitHub',
             d: .4,
         },
         {
             link: 'https://www.linkedin.com/in/ethan-logue-53b90320b',
             icon: <FaLinkedin />,
+            label: 'LinkedIn',
             d: .5,
         },
         {
             link: 'mailto:eml8469@rit.edu',
             icon: <SiGmail />,
+            label: 'Email',
             d: .6,
         },
     ];

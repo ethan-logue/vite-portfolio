@@ -59,6 +59,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image
                             className='project-link project-src-link'
                             href={sourceLink}
                             target='_blank'
+                            aria-label={`${name} Source Code`}
                             whileHover={{ scale: 1.25 }}
                             whileTap={{ scale: 1.0 }}
                             transition={{ type: "spring", stiffness: 300, damping: 15 }}
@@ -68,6 +69,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image
                         <motion.a
                             className='project-link'
                             href={liveLink}
+                            aria-label={name}
                             target='_blank'
                             whileHover={{ scale: 1.25 }}
                             whileTap={{ scale: 1.0 }}

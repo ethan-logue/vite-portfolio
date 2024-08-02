@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 import Page from '../../components/Page';
 import SkillStack from './SkillStack';
-import LineArt from './LineArt';
+import { LineArtMain } from './LineArt';
 
 const About: React.FC = () => {
     return (
@@ -18,7 +18,7 @@ const About: React.FC = () => {
                 </div>
 
                 <div className='about-line-art'>
-                    <LineArt />
+                    <LineArtMain />
                 </div>
     
             </div>

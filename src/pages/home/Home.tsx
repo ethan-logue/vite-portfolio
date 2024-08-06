@@ -52,7 +52,7 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <Page page={'home'} pageContainer={'home-container'}>
+        <Page page={'home'} pageContainer={'home-container'} fullWidth={true}>
             <motion.h1
                 className='page-title'
                 ref={ref}

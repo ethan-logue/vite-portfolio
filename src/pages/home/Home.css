@@ -1,5 +1,5 @@
 .home {
-    background-color: var(--primary);
+    z-index: 10;
 }
 
 .home-container {

@@ -7,6 +7,17 @@
     position: relative;
 }
 
+.full-width {
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.full-width .page-wrapper {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
 .page-container {
     display: flex;
     flex-direction: column;

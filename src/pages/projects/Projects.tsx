@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
 	];
 
 	return (
-		<Page page={'projects'}>
+		<Page page={'projects'} fullWidth={true}>
 			<h2 className='page-title'>Projects</h2>
 			<div className='project-container'>
 				{projects.map((project, index) => (

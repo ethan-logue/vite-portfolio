@@ -22,7 +22,6 @@ const Projects: React.FC = () => {
 			tag: '2023 / Team Project',
 			image: './images/technet.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML', 'Figma'],
-			liveLink: 'https://technet.rit.edu/',
 			d: .3,
 		},
 		{

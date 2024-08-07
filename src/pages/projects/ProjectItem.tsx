@@ -11,7 +11,7 @@ export interface ProjectItemProps {
     image: string;
     techStack: string[];
     sourceLink?: string;
-    liveLink: string;
+    liveLink?: string;
     d: number;
 }
 
@@ -49,11 +49,11 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image
             <img className='project-cover' src={image} alt="thumbnail of project" />
             <div className='project-details'>
                 <div className='project-header'>
-                    <span>
+                    <div className='project-header-info'>
                         <h3 className='project-title'>{name}</h3>
                         <p className='project-tag'>{tag}</p>
-                    </span>
-                    <span>
+                    </div>
+                    <div className='project-header-links'>
                         {sourceLink ? ( 
                         <motion.a
                             className='project-link project-src-link'
@@ -66,6 +66,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image
                         >
                             <PiCodeBlockBold />
                         </motion.a>) : null}
+                        {liveLink ? ( 
                         <motion.a
                             className='project-link'
                             href={liveLink}
@@ -76,8 +77,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image
                             transition={{ type: "spring", stiffness: 300, damping: 15 }}
                         >
                             <FiExternalLink />
-                        </motion.a>
-                    </span>
+                        </motion.a>) : null}
+                    </div>
                 </div>
                 <p className='project-description'>{description}</p>
                 <ul className='tech-stack'>

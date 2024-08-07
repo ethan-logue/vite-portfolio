@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    gap: 1rem;
+    gap: 1.5rem;
     color: var(--text);
     max-width: 1000px;
 }
@@ -32,15 +32,31 @@
     justify-content: space-between;
 }
 
-.project-header span {
-    display: flex;
-    gap: 1rem;
-    align-items: baseline;
+.project-header > div {
     position: relative;
+    display: flex;
+    align-items: baseline;
 }
 
-.project-header span:last-child {
-    padding-left: 1.5rem;
+.project-header-info {
+    gap: 0.75rem;
+}
+
+.project-header-links {
+    gap: 0.5rem;
+}
+
+.project-link {
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.25rem;
+    line-height: 0;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.project-link:hover {
+    color: var(--tertiary);
 }
 
 .project-cover {
@@ -64,25 +80,6 @@
     margin: 0;
 }
 
-.project-src-link {
-    font-size: 1.3rem;
-    position: absolute;
-    right: 1.75rem;
-    top: 0.1rem;
-}
-
-.project-link {
-    color: inherit;
-    font-family: inherit;
-    font-size: 1.25rem;
-    text-decoration: none;
-    transition: color .3s ease;
-}
-
-.project-link:hover {
-    color: var(--tertiary);
-}
-
 .project-description {
     font-size: 1rem;
 }
@@ -100,18 +97,34 @@
     font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-    .project-item {
-        flex-direction: column;
-        align-items: flex-start;
+@media (max-width: 1200px) {
+    .page.projects {
+        box-shadow: none;
     }
+}
 
+@media (max-width: 768px) {
     .project-title {
         font-size: 1.25rem;
     }
 }
 
+@media (max-width: 700px) {
+    .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-description {
+        margin: 0.5rem 0 0.8rem;
+    }
+}
+
 @media (max-width: 480px) {
+    .project-container {
+        margin: 1rem 0 2rem;
+    }
+
     .project-cover {
         width: 7rem;
         height: 7rem;
@@ -135,5 +148,12 @@
 
     .tech-item {
         font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-header-info {
+        flex-direction: column;
+        gap: 0.25rem;
     }
 }

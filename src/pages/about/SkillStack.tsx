@@ -111,20 +111,17 @@ const SkillStack: React.FC = () => {
     ];
 
     const [ref, inView] = useInView({
-        triggerOnce: true,
         threshold: 0.2
     });
 
     const skillContainer = {
         hidden: {
             opacity: 0,
-            y: 100,
         },
         visible: {
             opacity: 1,
-            y: 0,
             transition: {
-                delayChildren: 0.2,
+                staggerChildren: 0.1,
             },
         },
     };

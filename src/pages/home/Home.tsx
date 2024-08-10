@@ -6,7 +6,6 @@ import { SiGmail } from 'react-icons/si'
 import SocialLink, { SocialLinkProps } from './SocialLink';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import BackgAccent from './BackgAccent';
 
 const Home: React.FC = () => {
 
@@ -53,7 +52,7 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <Page page={'home'} pageContainer={'home-container'} fullWidth={true} fullWidthElement={<BackgAccent parent={'home'} />}>
+        <Page page={'home'} pageContainer={'home-container'} fullWidth={true}>
             <motion.h1
                 className='page-title'
                 ref={ref}

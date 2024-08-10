@@ -18,7 +18,6 @@ export interface ProjectItemProps {
 const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image, techStack, sourceLink, liveLink, d }) => {
 
     const [ref, inView] = useInView({
-        triggerOnce: true,
         threshold: 0
     });
 

@@ -1,20 +1,12 @@
 import React from 'react';
-import { useCursor } from '../../components/cursor/useCursor';
+import useCursorHandlers from '../../components/cursor/useCursorHandlers';
 import './Home.css';
 
 const Home: React.FC = () => {
-    const { setCursor } = useCursor();
-
-    const handleMouseEnter = () => {
-        setCursor({ hover: true });
-    };
-
-    const handleMouseLeave = () => {
-        setCursor({ hover: false });
-    };
+    const cursorHandlers = useCursorHandlers();
 
     return (
-        <button className='test-btn' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Hover over me!!</button>
+        <button className='test-btn' {...cursorHandlers}>Hover over me!!</button>
     );
 };
 

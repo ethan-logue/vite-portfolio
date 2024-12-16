@@ -14,15 +14,34 @@ const Cursor = () => {
             }
         };
 
-        document.addEventListener('mousemove', updatePosition, false);
-        document.addEventListener('mouseenter', updatePosition, false);
+        const handleMouseEnter = () => {
+            if (svgRef.current) {
+                svgRef.current.style.display = 'block';
+            }
+        };
+
+        const handleMouseLeave = () => {
+            if (svgRef.current) {
+                svgRef.current.style.display = 'none';
+            }
+        };
+
+        const options = { capture: false, passive: true };
+
+        document.addEventListener('mousemove', updatePosition, options);
+        document.addEventListener('mouseenter', updatePosition, options);
+        document.addEventListener('mouseenter', handleMouseEnter, options);
+        document.addEventListener('mouseleave', handleMouseLeave, options);
 
         return () => {
-            document.removeEventListener('mousemove', updatePosition);
-            document.removeEventListener('mouseenter', updatePosition);
+            document.removeEventListener('mousemove', updatePosition, options);
+            document.removeEventListener('mouseenter', updatePosition, options);
+            document.removeEventListener('mouseenter', handleMouseEnter, options);
+            document.removeEventListener('mouseleave', handleMouseLeave, options);
         };
     }, []);
 
+  
     return (
         <div className='cursor-container'>
             <svg

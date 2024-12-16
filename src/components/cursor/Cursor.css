@@ -1,0 +1,29 @@
+.cursor-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.cursor {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s;
+}
+
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.cursor-circle {
+    fill: var(--text);
+    transition: all 0.15s;
+}
+
+.cursor.hover .cursor-circle {
+    fill: none;
+    stroke: var(--text);
+}

@@ -9,7 +9,7 @@ This branch is where I'm working on a new version of my site incorporating GSAP 
     - [x] Abstract event handlers
 - Home Page
     - [ ] Finalize design sketch
-    - [ ] Find a noise texture for the background
+    - [x] Find a noise texture for the background
 
 ## Bugs
 - [x] Cursor stays on page when mouse leaves viewport

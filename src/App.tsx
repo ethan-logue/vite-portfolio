@@ -9,6 +9,7 @@ const App: React.FC = () => {
         
     return (
         <main className='app'>
+            <div className='noise-overlay'></div>
             <Nav />
             <Home />
             <About />

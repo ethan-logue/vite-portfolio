@@ -1,0 +1,40 @@
+.code-window {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    background: #1e1e1e;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.code-header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.7rem;
+    background-color: #323233;
+    padding: 0.6rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.code-window-btn {
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+}
+
+.code-body {
+    padding: 1rem;
+    font-size: 14px;
+}
+
+.code-body pre {
+    white-space: pre-wrap;
+}

@@ -13,4 +13,4 @@ This branch is where I'm working on a new version of my site incorporating GSAP 
 
 ## Bugs
 - [x] Cursor stays on page when mouse leaves viewport
-- [ ] Custom cursor appears on mobile when clicking
+- [x] Custom cursor appears on mobile when clicking

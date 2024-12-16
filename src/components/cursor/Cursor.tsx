@@ -1,12 +1,29 @@
 import { useCursor } from './useCursor';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Cursor.css';
 
 const Cursor = () => {
     const { cursor } = useCursor();
     const svgRef = useRef<SVGSVGElement>(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        const checkIfMobile = () => {
+            const isMobileDevice = window.matchMedia("(pointer: coarse)").matches;
+            setIsMobile(isMobileDevice);
+        };
+
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+
+        return () => {
+            window.removeEventListener('resize', checkIfMobile);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) return;
+
         const updatePosition = (event: MouseEvent) => {
             if (svgRef.current) {
                 svgRef.current.style.left = `${event.clientX}px`;
@@ -39,8 +56,10 @@ const Cursor = () => {
             document.removeEventListener('mouseenter', handleMouseEnter, options);
             document.removeEventListener('mouseleave', handleMouseLeave, options);
         };
-    }, []);
+    }, [isMobile]);
 
+    // Disable cursor on mobile
+    if (isMobile) return null; 
   
     return (
         <div className='cursor-container'>
@@ -58,7 +77,7 @@ const Cursor = () => {
                     r='5'
                 />
             </svg>
-            </div>
+        </div>
     );
 };
 

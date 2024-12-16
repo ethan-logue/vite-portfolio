@@ -10,12 +10,12 @@
 
 .cursor {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: var(--translate);
     transition: transform 0.15s;
 }
 
 .cursor.hover {
-    transform: translate(-50%, -50%) scale(2);
+    transform: var(--translate) scale(2);
 }
 
 .cursor-circle {

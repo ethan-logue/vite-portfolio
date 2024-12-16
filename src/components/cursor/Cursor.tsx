@@ -36,7 +36,7 @@ const Cursor = () => {
                     className='cursor-circle'
                     cx='25'
                     cy='25'
-                    r='6'
+                    r='5'
                 />
             </svg>
             </div>

@@ -6,6 +6,8 @@
 	--darker-text: #B5B5B5;
 	--accent-lightblue: #3DA9FC;
 	--accent-darkblue: #2A65BD;
+	
+	--translate: translate(-50%, -50%);
 }
 
 * {

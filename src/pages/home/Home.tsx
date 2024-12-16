@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     };
 
     return (
-        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>HOVER over me!!</button>
+        <button className='test-btn' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Hover over me!!</button>
     );
 };
 

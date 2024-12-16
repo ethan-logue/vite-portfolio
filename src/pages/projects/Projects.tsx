@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import './Projects.css';
-import Page from '../../components/Page';
 import ProjectItem, { ProjectItemProps } from './ProjectItem';
 
 const Projects: React.FC = () => {
@@ -14,7 +14,6 @@ const Projects: React.FC = () => {
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML'],
 			sourceLink: 'https://github.com/ethan-logue/projects-src-code/tree/main/ischool-web-app',
 			liveLink: 'https://people.rit.edu/~eml8469/ISTE340/react/logue-project/',
-			d: .2,
 		},
 		{
 			name: 'TechNet',
@@ -22,7 +21,6 @@ const Projects: React.FC = () => {
 			tag: '2023 / Team Project',
 			image: './images/technet.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML', 'Figma'],
-			d: .3,
 		},
 		{
 			name: 'Portfolio',
@@ -32,7 +30,6 @@ const Projects: React.FC = () => {
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML'],
 			sourceLink: 'https://github.com/ethan-logue/ethan-logue.github.io',
 			liveLink: 'https://ethan-logue.github.io/',
-			d: .4,
 		},
 		{
 			name: 'Travel Site',
@@ -42,7 +39,6 @@ const Projects: React.FC = () => {
 			techStack: ['JavaScript', 'CSS', 'HTML', 'PHP'],
 			sourceLink: 'https://github.com/ethan-logue/projects-src-code/tree/main/travel-site',
 			liveLink: 'https://people.rit.edu/~eml8469/ISTE240/final/index.php',
-			d: .5,
 		},
 		{
 			name: 'Video Portfolio',
@@ -52,20 +48,12 @@ const Projects: React.FC = () => {
 			techStack: ['CSS', 'HTML'],
 			sourceLink: 'https://github.com/ethan-logue/projects-src-code/tree/main/video-portfolio',
 			liveLink: 'https://people.rit.edu/~eml8469/iste140/Roblox%20Application/',
-			d: .6,
 		},
 	];
 
 	return (
-		<Page page={'projects'} fullWidth={true}>
-			<h2 className='page-title'>Projects</h2>
-			<div className='project-container'>
-				{projects.map((project, index) => (
-					<ProjectItem key={index} {...project} />
-				))}
-			</div>
-    	</Page>
-  	);
+		<></>
+	);
 };
 
 export default Projects;

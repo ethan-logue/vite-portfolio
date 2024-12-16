@@ -1,14 +1,20 @@
 :root {
   font-family: 'Roboto', sans-serif;
   color-scheme: dark;
+  --background: #1c1c1c;
   --text: #e9e9e9;
-  --primary: #1c1c1c;
-  --secondary: #B5B5B5;
-  --tertiary: #3DA9FC;
-  --quaternary: #2A65BD;
+  --darker-text: #B5B5B5;
+  --accent-lightblue: #3DA9FC;
+  --accent-darkblue: #2A65BD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  overflow: hidden;
+  background-color: var(--primary);
+  color: var(--text);
 }

@@ -5,11 +5,12 @@ import './CodeWindow.css';
 
 type CodeWindowProps = {
     codeString: string;
+    classes?: string;
 };
 
-const CodeWindow: React.FC<CodeWindowProps> = ({ codeString }) => {
+const CodeWindow: React.FC<CodeWindowProps> = ({ codeString, classes }) => {
     return (
-        <div className='code-window'>
+        <div className={`code-window ${classes}`}>
             <div className='code-header'>
                 <div className='code-window-btn'></div>
                 <div className='code-window-btn'></div>

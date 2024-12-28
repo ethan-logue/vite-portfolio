@@ -8,8 +8,9 @@ This branch is where I'm working on a new version of my site incorporating GSAP 
     - [x] Context hook for easy manipulation
     - [x] Abstract event handlers
 - Home Page
-    - [ ] Finalize design sketch
     - [x] Find a noise texture for the background
+    - [ ] Finalize design sketch
+    - [ ] Position CodeWindow w/ Three
 
 ## Bugs
 - [x] Cursor stays on page when mouse leaves viewport

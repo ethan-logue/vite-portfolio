@@ -3,3 +3,21 @@
 
     height: 100vh;
 }
+
+.home-code {
+    /* transform: var(--translate) rotate3d(1, 1, 1, 350deg); */
+}
+
+.test-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    background-color: var(--accent-darkblue);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}

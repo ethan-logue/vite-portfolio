@@ -10,7 +10,6 @@ const CursorContext = createContext<CursorContextType | undefined>(undefined);
 
 const CursorContextProvider = ({ children }: { children: ReactNode }) => {
     const [cursor, setCursor] = useState({ hover: false });
-
     const value = useMemo(() => ({ cursor, setCursor }), [cursor, setCursor]);
 
     return (

@@ -7,7 +7,9 @@ const Home: React.FC = () => {
     const cursorHandlers = useCursorHandlers();
 
     const codeString = 
-`<h1>Ethan Logue</h1>
+`<!-- Web Dev Portfolio -->
+
+<h1>Ethan Logue</h1>
 
 <p>Hello there! I'm Ethan, a fourth year Web & Mobile Computing student at RIT. I'm passionate about creating engaging and interactive experiences on the web.</p>
 
@@ -20,7 +22,7 @@ const Home: React.FC = () => {
     return (
         <div className='home-container'>
             <button className='test-btn' {...cursorHandlers}>Hover over me!!</button>
-            <CodeWindow codeString={codeString} />
+            <CodeWindow codeString={codeString} classes='home-code' />
         </div>
     );
 };

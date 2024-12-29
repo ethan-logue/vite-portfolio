@@ -9,9 +9,11 @@ This branch is where I'm working on a new version of my site incorporating GSAP 
     - [x] Abstract event handlers
 - Home Page
     - [x] Find a noise texture for the background
-    - [ ] Finalize design sketch
-    - [ ] Position CodeWindow w/ Three
+    - [x] Finalize design sketch
+    - [x] CodeWindow tilt effect
+    - [ ] FlowerScene added
 
 ## Bugs
 - [x] Cursor stays on page when mouse leaves viewport
 - [x] Custom cursor appears on mobile when clicking
+- [ ] FlowerScene is not effected by light properly

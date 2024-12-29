@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                 rotationX: tiltX,
                 rotationY: tiltY,
                 transformPerspective: 500,
-                duration: 0.5,
+                duration: 1,
                 ease: 'power2.out',
             });
         };
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
             gsap.to(element, {
                 rotationX: 0,
                 rotationY: 0,
-                duration: 0.5,
+                duration: 1,
                 ease: 'power2.out',
             });
         };

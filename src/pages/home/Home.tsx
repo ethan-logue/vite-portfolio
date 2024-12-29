@@ -1,28 +1,70 @@
-import React from 'react';
-import useCursorHandlers from '../../components/cursor/useCursorHandlers';
-import './Home.css';
+import React, { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+// import useCursorHandlers from '../../components/cursor/useCursorHandlers';
 import CodeWindow from '../../components/CodeWindow';
+import codeData from './homeCodeString.json';
+import FlowerScene from './FlowerScene';
+import './Home.css';
 
 const Home: React.FC = () => {
-    const cursorHandlers = useCursorHandlers();
+    gsap.registerPlugin(useGSAP);
+    // const cursorHandlers = useCursorHandlers();
+    const codeWindowRef = useRef<HTMLDivElement>(null);
 
-    const codeString = 
-`<!-- Web Dev Portfolio -->
+    useGSAP(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            const element = codeWindowRef.current;
+            if (!element) return;
+            
+            const rect = element.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
 
-<h1>Ethan Logue</h1>
+            const tiltX = ((y / rect.height) - 0.5) * -3;
+            const tiltY = ((x / rect.width) - 0.5) * 3;
 
-<p>Hello there! I'm Ethan, a fourth year Web & Mobile Computing student at RIT. I'm passionate about creating engaging and interactive experiences on the web.</p>
+            gsap.to(element, {
+                rotationX: tiltX,
+                rotationY: tiltY,
+                transformPerspective: 500,
+                duration: 0.5,
+                ease: 'power2.out',
+            });
+        };
 
-<ul class="social-links">
-    <li>GitHub</li>
-    <li>LinkedIn</li>
-    <li>Email</li>
-</ul>`;
+        const handleMouseLeave = () => {
+            const element = codeWindowRef.current;
+            if (!element) return;
+
+            gsap.to(element, {
+                rotationX: 0,
+                rotationY: 0,
+                duration: 0.5,
+                ease: 'power2.out',
+            });
+        };
+
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseleave', handleMouseLeave);
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseleave', handleMouseLeave);
+        };
+    }, []);
 
     return (
         <div className='home-container'>
-            <button className='test-btn' {...cursorHandlers}>Hover over me!!</button>
-            <CodeWindow codeString={codeString} classes='home-code' />
+            {/* <button className='test-btn' {...cursorHandlers}>Hover over me!!</button> */}
+            <div className='home-content'>
+                <div ref={codeWindowRef} className='home-code-container'>
+                    <CodeWindow codeString={codeData.codeString} classes='home-code' />
+                </div>
+                <div className='home-three-container'>
+                    <FlowerScene />
+                </div>
+            </div>
         </div>
     );
 };

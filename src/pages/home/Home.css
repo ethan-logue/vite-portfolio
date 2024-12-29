@@ -1,11 +1,24 @@
 .home-container {
     position: relative;
-
     height: 100vh;
 }
 
-.home-code {
-    /* transform: var(--translate) rotate3d(1, 1, 1, 350deg); */
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home-code-container {
+    transform-style: preserve-3d;
+    width: fit-content;
+}
+
+.home-three-container {
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
 }
 
 .test-btn {
